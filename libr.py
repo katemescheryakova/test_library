@@ -20,6 +20,7 @@ class Book:
         self.year = year
         self.status = status
     # метод для вывода строки в консоль
+    # return: строковое представление данных о книгах
     def __str__(self):
         return f"ID: {self.id}\nНазвание: {self.title}\nАвтор: {self.author}\nГод: {self.year}\nСтатус: {self.status}"
 
@@ -35,6 +36,7 @@ class LibraryManager:
         self.filename = filename
         self.books = self.load_library()
     # загрузка данных о книгах из файла (с обработкой исключения, если файл пустой)
+    # return: список с книгами, загруженными из файла
     def load_library(self):
         books = []
         try:
